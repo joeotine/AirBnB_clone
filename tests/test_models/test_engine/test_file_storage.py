@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""This module defines the  unittests for models/engine/file_storage.py.
-
+"""Defines unittests for models/engine/file_storage.py.
 Unittest classes:
     TestFileStorage_instantiation
     TestFileStorage_methods
@@ -21,7 +20,7 @@ from models.review import Review
 
 
 class TestFileStorage_instantiation(unittest.TestCase):
-    """This is the Unittests for testing instantiation of the FileStorage class."""
+    """Unittests for testing instantiation of the FileStorage class."""
 
     def test_FileStorage_instantiation_no_args(self):
         self.assertEqual(type(FileStorage()), FileStorage)
@@ -41,7 +40,7 @@ class TestFileStorage_instantiation(unittest.TestCase):
 
 
 class TestFileStorage_methods(unittest.TestCase):
-    """This is the Unittests for testing methods of the FileStorage class."""
+    """Unittests for testing methods of the FileStorage class."""
 
     @classmethod
     def setUp(self):
@@ -163,6 +162,9 @@ class TestFileStorage_methods(unittest.TestCase):
         self.assertIn("City." + cy.id, objs)
         self.assertIn("Amenity." + am.id, objs)
         self.assertIn("Review." + rv.id, objs)
+
+    def test_reload_no_file(self):
+        self.assertRaises(FileNotFoundError, models.storage.reload())
 
     def test_reload_with_arg(self):
         with self.assertRaises(TypeError):

@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""This module defines the  unittests for models/state.py.
-
+"""Defines unittests for models/state.py.
 Unittest classes:
     TestState_instantiation
     TestState_save
@@ -15,7 +14,7 @@ from models.state import State
 
 
 class TestState_instantiation(unittest.TestCase):
-    """This is the Unittests for testing instantiation of the State class."""
+    """Unittests for testing instantiation of the State class."""
 
     def test_no_args_instantiates(self):
         self.assertEqual(State, type(State()))
@@ -85,7 +84,7 @@ class TestState_instantiation(unittest.TestCase):
 
 
 class TestState_save(unittest.TestCase):
-    """This is the Unittests for testing save method of the State class."""
+    """Unittests for testing save method of the State class."""
 
     @classmethod
     def setUp(self):
@@ -136,7 +135,7 @@ class TestState_save(unittest.TestCase):
 
 
 class TestState_to_dict(unittest.TestCase):
-    """This is the Unittests for testing to_dict method of the State class."""
+    """Unittests for testing to_dict method of the State class."""
 
     def test_to_dict_type(self):
         self.assertTrue(dict, type(State().to_dict()))

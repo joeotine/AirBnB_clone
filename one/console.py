@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This module defines the AirBnb console."""
+"""Defines the HBnB console."""
 import cmd
 import re
 from shlex import split

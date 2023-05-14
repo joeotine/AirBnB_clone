@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""This module defines the FileStorage class."""
+"""Defines the FileStorage class."""
 import json
 from models.base_model import BaseModel
 from models.user import User
@@ -11,7 +11,7 @@ from models.review import Review
 
 
 class FileStorage:
-    """This will represent an abstracted storage engine.
+    """Represent an abstracted storage engine.
     Attributes:
         __file_path (str): The name of the file to save objects to.
         __objects (dict): A dictionary of instantiated objects.
